@@ -28,4 +28,5 @@ task:
       - git clone https://github.com/AzurE-007/kernel_xiaomi_raphael.git -b android11 kernel && cd kernel
   
   build_script:
-      - ./build.sh
+      curl -sL https://raw.githubusercontent.com/AzurE-007/kraken_test/main/build.sh | bash
+
