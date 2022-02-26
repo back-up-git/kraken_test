@@ -12,9 +12,9 @@ task:
   trigger_type: manual
   timeout_in: 120m
   container:
-      image: ubuntu:latest
+      image: anggit86/docker:cirrus
       cpu: 8
-      memory: 32G
+      memory: 20G
 
   env_script:
       - cat /etc/os*
