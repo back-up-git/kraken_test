@@ -24,7 +24,7 @@ task:
       - apt-get update && apt-get install -y bison build-essential bc bison curl libssl-dev git zip python flex cpio
       - git clone https://github.com/akhilnarang/scripts.git ~/scripts
       - cd ~/scripts
-      - sudo bash setup/android_build_env.sh
+      - bash setup/android_build_env.sh
       - cd ~
       - git config --global user.name "AzurE-007"
       - git config --global user.email "azurehelper01@gmail.com"
