@@ -1,0 +1,30 @@
+env:
+    BUILD_HOST: Kernel-CI
+    BUILD_USER: AzurE
+    CIRRUS_CLONE_DEPTH: 1
+    CIRRUS_WORKING_DIR: /tmp/cirrus-ci-build
+
+    # Cirrus Specific Vars (Do *NOT* Change)
+    CIRRUS_SHELL: bash
+
+task:
+  name: "Kernel-CI"
+  trigger_type: manual
+  timeout_in: 120m
+  container:
+      image: ubuntu:latest
+      cpu: 8
+      memory: 32G
+
+  env_script:
+      - cat /etc/os*
+      - env
+
+  sync_script:
+      - apt-get update && apt-get install -y bison build-essential bc bison curl libssl-dev git zip python flex cpio
+      - git config --global user.name "AzurE-007"
+      - git config --global user.email "azurehelper01@gmail.com"
+      - git clone https://github.com/AzurE-007/kernel_xiaomi_raphael.git -b android11 kernel && cd kernel
+  
+  build_script:
+      curl -sL https://raw.githubusercontent.com/AzurE-007/kraken_test/main/build.sh | bash
