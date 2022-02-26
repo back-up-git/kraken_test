@@ -22,6 +22,7 @@ task:
 
   sync_script:
       - apt-get update && apt-get install -y bison build-essential bc bison curl libssl-dev git zip python flex cpio
+      - apt-get install iperf
       - git config --global user.name "AzurE-007"
       - git config --global user.email "azurehelper01@gmail.com"
       - git clone https://github.com/AzurE-007/kernel_xiaomi_raphael.git -b android11 kernel && cd kernel
