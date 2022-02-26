@@ -173,7 +173,7 @@ then
 fi
 
 #Check Kernel Version
-KERVER=$(cat $KERNEL_DIR/out/.config | grep Linux/arm64 | cut -d " " -f3)
+KERVER=$(make kernelversion)
 
 
 # Set a commit head
