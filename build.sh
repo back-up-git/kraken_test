@@ -275,7 +275,7 @@ build_kernel() {
  	then
 		tg_post_msg "<b>$KBUILD_BUILD_VERSION CI Build Triggered</b>%0A<b>Docker OS: </b><code>$DISTRO</code>%0A<b>Kernel Version : </b><code>$KERVER</code>%0A<b>Date : </b><code>$(TZ=Asia/Jakarta date)</code>%0A<b>Device : </b><code>$MODEL [$DEVICE]</code>%0A<b>Pipeline Host : </b><code>$KBUILD_BUILD_HOST</code>%0A<b>Host Core Count : </b><code>$PROCS</code>%0A<b>Compiler Used : </b><code>$KBUILD_COMPILER_STRING</code>%0A<b>Linker : </b><code>$LINKER</code>%0a<b>Branch : </b><code>$CI_BRANCH</code>%0A<b>Top Commit : </b><code>$COMMIT_HEAD</code>%0A<a href='$SERVER_URL'>Link</a>"
 	fi
-        echo "test2"
+        
 	make O=out $DEFCONFIG
 	if [ $DEF_REG = 1 ]
 	then
@@ -287,7 +287,7 @@ build_kernel() {
 	fi
 
 	BUILD_START=$(date +"%s")
-	
+	echo "test2"
 	if [ $COMPILER = "clang" ]
 	then
 		MAKE+=(
@@ -319,7 +319,7 @@ build_kernel() {
 	then
 		MAKE+=( -s )
 	fi
-
+        echo "test3"
 	msg "|| Started Compilation ||"
 	make -kj"$PROCS" O=out \
 		V=$VERBOSE \
@@ -335,7 +335,7 @@ build_kernel() {
 		 "${MAKE[@]}" modules_install INSTALL_MOD_PATH="$KERNEL_DIR"/out/modules
 	    find "$KERNEL_DIR"/out/modules -type f -iname '*.ko' -exec cp {} AnyKernel3/modules/system/lib/modules/ \;
 	fi
-
+                echo "test4"
 		BUILD_END=$(date +"%s")
 		DIFF=$((BUILD_END - BUILD_START))
 
