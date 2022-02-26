@@ -205,7 +205,7 @@ DATE=$(TZ=Asia/Kolkata date +"%Y%m%d-%T")
 
 	msg "|| Cloning Anykernel ||"
 	git clone https://github.com/AzurE-007/AnyKernel3.git -b master AnyKernel3
-
+        echo "test1"
 	if [ $BUILD_DTBO = 1 ]
 	then
 		msg "|| Cloning libufdt ||"
@@ -275,7 +275,7 @@ build_kernel() {
  	then
 		tg_post_msg "<b>$KBUILD_BUILD_VERSION CI Build Triggered</b>%0A<b>Docker OS: </b><code>$DISTRO</code>%0A<b>Kernel Version : </b><code>$KERVER</code>%0A<b>Date : </b><code>$(TZ=Asia/Jakarta date)</code>%0A<b>Device : </b><code>$MODEL [$DEVICE]</code>%0A<b>Pipeline Host : </b><code>$KBUILD_BUILD_HOST</code>%0A<b>Host Core Count : </b><code>$PROCS</code>%0A<b>Compiler Used : </b><code>$KBUILD_COMPILER_STRING</code>%0A<b>Linker : </b><code>$LINKER</code>%0a<b>Branch : </b><code>$CI_BRANCH</code>%0A<b>Top Commit : </b><code>$COMMIT_HEAD</code>%0A<a href='$SERVER_URL'>Link</a>"
 	fi
-
+        echo "test2"
 	make O=out $DEFCONFIG
 	if [ $DEF_REG = 1 ]
 	then
