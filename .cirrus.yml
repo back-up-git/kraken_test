@@ -9,10 +9,10 @@ env:
 
 task:
   name: "Kernel-CI"
-  trigger_type: manual
+  #trigger_type: manual
   timeout_in: 120m
   container:
-      image: anggit86/docker:cirrus
+      image: ubuntu:latest
       cpu: 8
       memory: 20G
 
