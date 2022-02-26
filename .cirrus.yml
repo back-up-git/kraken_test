@@ -21,7 +21,6 @@ task:
       - env
 
   sync_script:
-      - apt-get install build-essential
       - apt-get update && apt-get install -y bison build-essential bc bison curl libssl-dev git zip python flex cpio
       - apt-get update
       - apt-get -y install make
