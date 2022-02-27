@@ -25,6 +25,6 @@ task:
       - git config --global user.email "azurehelper01@gmail.com"
       - git clone https://github.com/AzurE-007/kernel_xiaomi_raphael.git -b android11 kernel && cd kernel
   
-  build_script:
+  Build_kernel_GCC_12_script:
       - ./build.sh
 
