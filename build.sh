@@ -44,9 +44,8 @@ cdir() {
 ##----------Basic Informations, COMPULSORY--------------##
 
 # The defult directory where the kernel should be placed
-PWD="$(pwd)"
+KERNEL_DIR="$(pwd)"
 BASEDIR="$(basename "$KERNEL_DIR")"
-KERNEL_DIR=$PWD/kernel
 
 # The name of the Kernel, to name the ZIP
 ZIPNAME="IMMENSITY"
