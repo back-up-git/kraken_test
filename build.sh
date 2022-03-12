@@ -44,7 +44,7 @@ cdir() {
 ##----------Basic Informations, COMPULSORY--------------##
 
 # The defult directory where the kernel should be placed
-KERNEL_DIR="$(pwd)"
+KERNEL_DIR=$CIRRUS_WORKING_DIR/kernel
 BASEDIR="$(basename "$KERNEL_DIR")"
 
 # The name of the Kernel, to name the ZIP
