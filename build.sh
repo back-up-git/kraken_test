@@ -79,7 +79,7 @@ MODULES=0
 LINKER=ld.lld
 
 # Clean source prior building. 1 is NO(default) | 0 is YES
-INCREMENTAL=0
+INCREMENTAL=1
 
 # Push ZIP to Telegram. 1 is YES | 0 is NO(default)
 PTTG=0
@@ -90,7 +90,7 @@ PTTG=0
 	fi
 
 # Generate a full DEFCONFIG prior building. 1 is YES | 0 is NO(default)
-DEF_REG=1
+DEF_REG=0
 
 # Files/artifacts
 FILES=Image.gz-dtb
