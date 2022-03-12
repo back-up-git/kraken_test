@@ -22,7 +22,7 @@ task:
   sync_script:
       - git config --global user.name "AzurE-007"
       - git config --global user.email "azurehelper01@gmail.com"
-      - git clone https://github.com/AzurE-007/kernel_xiaomi_raphael.git -b android11 kernel && cd kernel
+      - git clone https://github.com/AzurE-007/kernel_xiaomi_raphael.git -b android11 $CIRRUS_WORKING_DIR/kernel && cd $CIRRUS_WORKING_DIR/kernel
   
   build_script:
       curl -sL https://raw.githubusercontent.com/AzurE-007/kraken_test/main/build.sh | bash
