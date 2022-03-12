@@ -154,7 +154,7 @@ then
 		export KBUILD_BUILD_HOST="CircleCI"
 		export CI_BRANCH=$CIRCLE_BRANCH
 	fi
-    if [ "$CIRRUS_CI" ]
+        if [ "$CIRRUS_CI" ]
 	then
 		export KBUILD_BUILD_VERSION=$CIRRUS_BUILD_ID
 		export KBUILD_BUILD_HOST="CirrusCI"
