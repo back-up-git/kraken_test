@@ -3,7 +3,7 @@ env:
     BUILD_USER: AzurE
     CIRRUS_CLONE_DEPTH: 1
 
-    # Cirrus Specific Vars (Do *NOT* Change)
+    # Cirrus Specific Vars (Do *NOT* Change)#
     CIRRUS_SHELL: bash
 
 task:
