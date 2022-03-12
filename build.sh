@@ -156,7 +156,7 @@ echo BUILDER HOSTNAME = ${KBUILD_BUILD_HOST}
 echo BUILDER BRANCH = ${CI_BRANCH}
 	
 #Check Kernel Version
-KERVER=$(cat $KERNEL_DIR/out/.config | grep Linux/arm64 | cut -d " " -f3
+KERVER=$(cat $KERNEL_DIR/out/.config | grep Linux/arm64 | cut -d " " -f3)
 
 
 # Set a commit head
